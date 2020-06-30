@@ -8,7 +8,7 @@ class AhorcadoTest(unittest.TestCase):
         self.juego = Juego()
 
     def test(self):
-        letra="p"
+        letra="a"
         result= self.juego.validar_letra(letra)
         self.assertEqual(True, result)
 
