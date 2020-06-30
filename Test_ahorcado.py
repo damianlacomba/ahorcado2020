@@ -9,6 +9,7 @@ class AhorcadoTest(unittest.TestCase):
 
     def test(self):
         letra="p"
+        result= self.juego.validar_letra(letra)
         self.assertEqual(True, result)
 
    
