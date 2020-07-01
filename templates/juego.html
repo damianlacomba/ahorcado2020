@@ -1,0 +1,49 @@
+{%extends "base.html"%}
+{%block content%}
+<div class="content">
+    <div class="msj">
+    {%if juego.resultado=="":%}
+        <h1>Hola, {{juego.jugador | capitalize}} !</h1>
+    {%elif juego.resultado=="ganador":%}
+        <h1 class="winner">¡¡Felicitaciones {{juego.jugador | capitalize}}!!<br> ¡¡Ganaste!!</h2>
+    {%else:%}
+        <h1 class="loser">Oh, lo siento {{juego.jugador | capitalize}}<br> Perdiste</h2> 
+    {%endif%}
+    </div>
+    <div class="game-container">
+            <div class="picture">
+                <picture>
+                    {%if juego.intentos>=0 %}
+                    <img src="{{'static/img/ahorcado_{}.png'.format(juego.intentos)}}" alt="" id="{{'image{}'.format(juego.intentos)}}">
+                    {%else%}
+                    <img src="static/img/ahorcado_0.png" alt="" id="image0">
+                    {%endif%}
+                </picture>
+                <p>Intentos restantes: {%if juego.intentos>=0 %}{{juego.intentos}}{%else%}0{%endif%}</p>
+            </div>
+            <div class="words">
+                {%if juego.resultado=="perdedor":%}
+                <h2 class="word" id="word">{{" ".join(juego.palabra)}}</h2>
+                {%else:%}
+                    <h2 class="word" id="word">{{" ".join(juego.palabra_usuario)}}</h2>
+                {%endif%}
+                {%for letra in ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z']:%}
+                      {%if letra in juego.letras: %}
+                        <a class="boton_personalizado1"value="{{letra}}"  class="letra"  id="{{letra}}">{{letra}}</a>
+                      {%else:%}
+                        <a class="boton_personalizado1"value="{{letra}}" href="/jugar/{{letra}}" class="letra" id="{{letra}}">{{letra}}</a>
+                      {%endif%}
+                {%endfor%}
+            </div>
+            
+            <div class="new-game">
+                <a class="boton_personalizado" href="/" id="reset">Volver a jugar</a>
+                <a class="boton_personalizado" href="/" id="reset">Cambiar palabra</a>
+                <a class="boton_personalizado" href="/" id="reset">Nuevo Juego</a>
+            </div>
+        
+        
+    </div>
+</div>
+
+{%endblock%}

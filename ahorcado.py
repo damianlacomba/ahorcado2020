@@ -8,10 +8,15 @@ class Juego(object):
         self.letras = []
         self.resultado = ""
         self.palabra_usuario = []
+        self.jugador = ""
     
     def set_palabra(self,palabra):
         self.palabra = palabra
         self.set_palabra_usuario(palabra)
+    
+    def set_jugador(self,jugador):
+        self.jugador = jugador
+    
         
     def set_palabra_usuario(self,palabra):
         self.palabra_usuario = [ "_" for i in range(len(palabra))]
@@ -38,6 +43,7 @@ class Juego(object):
         
     def bienvenida(self,nombre):
         nombre = nombre.capitalize()
+        self.jugador = nombre
         return ("Hola {}".format(nombre))
 
     

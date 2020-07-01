@@ -62,5 +62,25 @@ class AhorcadoTest(unittest.TestCase):
         self.probar_letras(letras_seleccionadas)
         palabra_completada = self.juego.palabra_usuario
         self.assertEqual (["g","a","t","a"],palabra_completada)
-
+    
+    def test_intentos_disponibles_6(self):
+        letras_seleccionadas = ["g","t"]
+        self.juego.set_palabra("gato")
+        self.probar_letras(letras_seleccionadas)
+        intentos = self.juego.intentos
+        self.assertEqual (6,intentos)
+    
+    def test_intentos_disponibles_5(self):
+        letras_seleccionadas = ["g","t","w"]
+        self.juego.set_palabra("gato")
+        self.probar_letras(letras_seleccionadas)
+        intentos = self.juego.intentos
+        self.assertEqual (5,intentos)
+    
+    def test_letras_disponibles_5(self):
+        letras_seleccionadas = ["g","t","w"]
+        self.juego.set_palabra("gato")
+        self.probar_letras(letras_seleccionadas)
+        letras = self.juego.letras
+        self.assertEqual (letras_seleccionadas,letras)
    
