@@ -9,7 +9,7 @@ class AhorcadoTest(unittest.TestCase):
 
     def test_palabra_gato_probarletra_A(self):
         self.juego.set_palabra("gato")
-        letra = "a"
+        letra = "p"
         resultado = self.juego.validar_letra(letra)
         self.assertEqual(True,resultado)
     
