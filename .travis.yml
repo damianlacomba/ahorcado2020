@@ -5,7 +5,6 @@ cache: pip
 install: "pip install -r requirements.txt"
 script: python -m unittest Test_ahorcado
 deploy:
-deploy:
   provider: heroku
   app: agiles20-ahorcado
   api_key: 2fc8f6cf-d918-4562-8c4e-29d45eb554a3
