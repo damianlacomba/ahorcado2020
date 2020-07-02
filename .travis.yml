@@ -6,8 +6,8 @@ install: "pip install -r requirements.txt"
 script: python -m unittest Test_ahorcado
 deploy:
   provider: heroku
+  api_key:
+    secure: 2fc8f6cf-d918-4562-8c4e-29d45eb554a3
   app: agiles20-ahorcado
   on:
-    branch: master
-  api_key:
-    secure: fbabebfc-5d13-45eb-93f3-231e00fcb943
+    repo: damianlacomba/ahorcado2020  
