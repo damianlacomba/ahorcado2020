@@ -4,3 +4,10 @@ python:
 cache: pip
 install: "pip install -r requirements.txt"
 script: python -m unittest Test_ahorcado
+deploy:
+  provider: heroku
+  username: damianlacomba@hotmail.com.ar
+  password: rojo952010+
+  app: agiles20-ahorcado
+  on:
+    repo: damianlacomba/ahorcado2020
