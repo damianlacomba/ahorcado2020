@@ -2,3 +2,5 @@
 # Add any libraries that must first be installed (e.g. pyperclip or pygame)
 # pyperclip
 # pygame
+Flask==1.1.1
+gunicorn==20.0.4

@@ -52,3 +52,5 @@ def seleccionar_letra(letra):
     juego.jugar(letra)
     return render_template('ahorcado.html', juego = juego)"""
   
+if __name__ == "__main__":
+    app.run(debug=True)
