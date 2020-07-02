@@ -7,4 +7,4 @@ script: python -m unittest Test_ahorcado
 deploy:
   provider: heroku
   app: agiles20-ahorcado
-  api_key: 2fc8f6cf-d918-4562-8c4e-29d45eb554a3
+  api_key: d2dc6c55-2642-4291-a369-ee0a27e66ff1
