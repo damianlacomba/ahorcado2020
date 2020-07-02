@@ -29,17 +29,17 @@
                 {%endif%}
                 {%for letra in ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z']:%}
                       {%if letra in juego.letras: %}
-                        <a class="boton_personalizado1"value="{{letra}}"  class="letra"  id="{{letra}}">{{letra}}</a>
+                        <a value="{{letra}}"  class="letra"  id="{{letra}}">{{letra}}</a>
                       {%else:%}
-                        <a class="boton_personalizado1"value="{{letra}}" href="/jugar/{{letra}}" class="letra" id="{{letra}}">{{letra}}</a>
+                        <a value="{{letra}}" href="/jugar/{{letra}}" class="letra" id="{{letra}}">{{letra}}</a>
                       {%endif%}
                 {%endfor%}
             </div>
             
             <div class="new-game">
-                <a class="boton_personalizado" href="/" id="reset">Volver a jugar</a>
-                <a class="boton_personalizado" href="/" id="reset">Cambiar palabra</a>
-                <a class="boton_personalizado" href="/" id="reset">Nuevo Juego</a>
+                <a href="/" id="reset">Volver a jugar</a>
+                <a href="/" id="reset">Cambiar palabra</a>
+                <a href="/" id="reset">Nuevo Juego</a>
             </div>
         
         

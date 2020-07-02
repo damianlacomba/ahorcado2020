@@ -32,8 +32,9 @@ body{
 
 .content{
     height: 100vh;
-    margin-top: 80px;
+    margin-top: 40px;
     text-align: center;
+    
 }
 
 .user{
@@ -84,8 +85,9 @@ picture img {
 
 .new-game{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .new-game > #reset{
