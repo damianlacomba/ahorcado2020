@@ -3,7 +3,13 @@ python:
   - "3.8"
 cache: pip
 install: "pip install -r requirements.txt"
+addons:
+  sonarcloud:
+    organization: "damianlacomba_ahorcado2020" 
+    token:
+      secure: b1da882ae7c1605ef1d8d81221a2363fc06b48c1
 script: python -m unittest Test_ahorcado
+        - sonar-scanner
 deploy:
   provider: heroku
   app: agiles20-ahorcado
