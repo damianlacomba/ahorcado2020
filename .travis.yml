@@ -3,24 +3,16 @@ python:
   - "3.8"
 cache: pip
 install: "pip install -r requirements.txt"
-           "pip install coverage"
-           "pip install coveralls"
-
+          
 addons:
   sonarcloud:
     organization: "damianlacomba_ahorcado2020" 
     token:
       secure: b1da882ae7c1605ef1d8d81221a2363fc06b48c1
 
-script: 
-        coverage run unittest Test_ahorcado
-repo_token: F498ZEUrFOSEVNNrbc16NtjYQHIENHqwa
-
-  after_success:
-  coveralls
+script: python -m unittest Test_ahorcado
       
 deploy:
   provider: heroku
   app: agiles20-ahorcado
   api_key: d2dc6c55-2642-4291-a369-ee0a27e66ff1
-
