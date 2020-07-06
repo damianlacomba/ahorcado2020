@@ -2,8 +2,8 @@ language: python
 python:
   - "3.8"
 cache: pip
-install: -pip install -r requirements.txt
-         -pip install coveralls
+install: "pip install -r requirements.txt"
+         "pip install coveralls"
          
 addons:
   sonarcloud:
