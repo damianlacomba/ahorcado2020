@@ -37,6 +37,13 @@ body{
     
 }
 
+.content1{
+    height: 100vh;
+    margin-top: 40px;
+    text-align: center;
+    
+}
+
 .user{
     height: 34px;
     width: 400px;
@@ -135,10 +142,16 @@ picture img {
         }
         .content {
             text-align: center;
-            font-size: 16px;
-            padding: 30px;
+            font-size: 15px;
+            padding: 18px;
             margin-top: -25px;
-            height: 77vh;
+            height: 81vh;
+        }
+        .content1 {
+            height: 68vh;
+            margin-top: 103px;
+            text-align: center;
+            font-size: 15px;
         }
         .letra {
             text-decoration: none;
@@ -168,7 +181,7 @@ picture img {
         }
         .user {
             height: 34px;
-            width: 100%;
+            width: 88%;
             border-radius: 10px;
             border-style: solid;
             border-width: thin;
