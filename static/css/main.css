@@ -131,20 +131,20 @@ picture img {
             color: white;
         }
         picture img {
-            height: 150px;
+            height: 160px;
         }
         .content {
             text-align: center;
-            font-size: 13px;
+            font-size: 16px;
             padding: 30px;
-            margin-top: -28px;
-            height: 102vh;
+            margin-top: -25px;
+            height: 77vh;
         }
         .letra {
             text-decoration: none;
-            padding: 1px;
+            padding: 5px;
             font-weight: 603;
-            font-size: 28px;
+            font-size: 23px;
             color: #ffffff;
             background-color: #2c303a;
             border-radius: 6px;
@@ -161,10 +161,17 @@ picture img {
         footer {
             background-color: #010101;
             color: white;
-            height: 64px;
+            height: 71px;
             padding-top: 1px;
             text-align: center;
-            margin-top: 22px;
+            margin-top: 0px;
+        }
+        .user {
+            height: 34px;
+            width: 100%;
+            border-radius: 10px;
+            border-style: solid;
+            border-width: thin;
         }
       }
 
