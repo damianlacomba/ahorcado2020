@@ -142,16 +142,16 @@ picture img {
         }
         .content {
             text-align: center;
-            font-size: 15px;
+            font-size: 19px;
             padding: 18px;
             margin-top: -25px;
-            height: 81vh;
+            height: 82vh;
         }
         .content1 {
-            height: 68vh;
+            height: 70vh;
             margin-top: 103px;
             text-align: center;
-            font-size: 15px;
+            font-size: 16px;
         }
         .letra {
             text-decoration: none;
