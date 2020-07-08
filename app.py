@@ -22,6 +22,7 @@ def index():
         user = request.form['user']
         session["user"] = user
         session["words"] = []
+        session["juegos"] = 0
         """print(user)
         global juego
         juego = Juego()
@@ -37,7 +38,7 @@ def index():
 def play():
     juego = Juego()
     juego.set_jugador(session["user"])
-    juego.set_palabra("DINOSAURIO")
+    juego.elegir_palabra(session["juegos"])
 
     if "words" in session:
         print(session["words"])
@@ -58,6 +59,7 @@ def seleccionar_letra(letra):
 @app.route('/resetear')
 def reset():
     session["words"]=[]
+    session["juegos"] +=1 
     return redirect(url_for("play"))
 
 

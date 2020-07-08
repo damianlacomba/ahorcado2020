@@ -2,13 +2,24 @@ class Juego(object):
     
     
     def __init__(self):
-        self.palabras = []
+        self.palabras = ["GATO","PERRO","DINOSAURIO","RINOCERONTE","AVESTRUZ"]
         self.palabra = ""
         self.intentos = 6
         self.letras = []
         self.resultado = ""
         self.palabra_usuario = []
         self.jugador = ""
+    
+    def elegir_palabra(self,pos):
+        try:
+            palabra = self.palabras[pos]
+            self.set_palabra(palabra)
+        except:
+            while pos > len(self.palabras)-1:
+                pos = pos-len(self.palabras)
+                
+            palabra = self.palabras[pos]
+            self.set_palabra(palabra)
     
     def set_palabra(self,palabra):
         self.palabra = palabra
@@ -29,10 +40,6 @@ class Juego(object):
         while index !=-1:
             self.palabra_usuario[index] = letra
             index = self.palabra.find(letra,index+1,len(self.palabra))
-            
-
-
-    
 
 
     def validar_letra(self,letra):
