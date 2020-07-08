@@ -10,7 +10,7 @@ addons:
     token:
       secure: b1da882ae7c1605ef1d8d81221a2363fc06b48c1
  
-script: python -m unittest Test_ahorcado
+script: coverage run -m unittest Test_ahorcado
 
 after_success: 
  - coveralls
