@@ -1,0 +1,58 @@
+<testsuite name="testui.Resultador de un jugador de la palabra GATO" tests="4" errors="0" failures="1" skipped="0" time="189.004492" timestamp="2020-07-10T15:26:19.967963" hostname="DL001"><testcase classname="testui.Resultador de un jugador de la palabra GATO" name="un jugador gana una partida cuando ingresa correctamente las letras" status="passed" time="29.048503"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: un jugador gana una partida cuando ingresa correctamente las letras
+    Given un jugador ... passed in 13.429s
+    When ingresa correctamente todas las letras ... passed in 10.590s
+    Then el resultado es ganador ... passed in 5.030s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="testui.Resultador de un jugador de la palabra GATO" name="un jugador pierde una partida cuando ingresa 6 veces las letras incorrectas" status="failed" time="51.070328"><failure type="AssertionError" message="">
+<![CDATA[
+Failing step: When ingresa 6 veces letras incorrectas ... failed in 41.946s
+Location: features/testui.feature:10
+Traceback (most recent call last):
+  File "c:\users\damian\appdata\local\programs\python\python38-32\lib\site-packages\behave\model.py", line 1329, in run
+    match.run(runner.context)
+  File "c:\users\damian\appdata\local\programs\python\python38-32\lib\site-packages\behave\matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features\steps\ganador_perfecto.py", line 47, in incorrect_words
+    assert palabra == "G A T O"
+AssertionError
+]]>
+</failure><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: un jugador pierde una partida cuando ingresa 6 veces las letras incorrectas
+    Given un jugador ... passed in 9.124s
+    When ingresa 6 veces letras incorrectas ... failed in 41.946s
+    Then el resultado es perdedor ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="testui.Resultador de un jugador de la palabra GATO" name="un jugador gana una partida cuando letras correctas e incorrectas en seis intentos" status="passed" time="43.595005"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: un jugador gana una partida cuando letras correctas e incorrectas en seis intentos
+    Given un jugador ... passed in 9.290s
+    When ingresa letras correctas e incorrectas ... passed in 29.278s
+    Then el resultado es ganador ... passed in 5.028s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="testui.Resultador de un jugador de la palabra GATO" name="Cuando un jugador gana y sigue aprentando letras el juego no se modifica" status="passed" time="65.290655"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Cuando un jugador gana y sigue aprentando letras el juego no se modifica
+    Given un ganador ... passed in 20.049s
+    When ingresa 6 veces letras incorrectas ... passed in 40.207s
+    Then el resultado es ganador ... passed in 5.035s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
