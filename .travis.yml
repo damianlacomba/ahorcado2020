@@ -17,7 +17,7 @@ addons:
       secure: b1da882ae7c1605ef1d8d81221a2363fc06b48c1
  
 script: coverage run -m unittest Test_ahorcado
-        - cucumber --version
+        cucumber --version
 
 after_success: 
  - coveralls
