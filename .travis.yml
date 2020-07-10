@@ -3,15 +3,7 @@ python:
   - "3.8"
 cache: pip
 
-before_install:
-  - pip install behave
-  - rvm install 2.3
-  - rvm use 2.3
-  - gem install hiptest-publisher
-
 install: pip install -r requirements.txt
-         pip install behave-webdriver
-         pip install selenium
          pip install coveralls
         
 addons:
@@ -20,7 +12,7 @@ addons:
     token:
       secure: b1da882ae7c1605ef1d8d81221a2363fc06b48c1
  
-script: behave --junit --junit-directory results 
+script: coverage run -m unittest Test_ahorcado
 
 after_success: 
  - coveralls
