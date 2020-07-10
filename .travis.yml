@@ -19,7 +19,7 @@ addons:
       secure: b1da882ae7c1605ef1d8d81221a2363fc06b48c1
  
 script: coverage run -m unittest Test_ahorcado
-       hiptest-publisher -c behave.conf  --push=results/results.json --test-run-id=208503
+        behave --format json -o results/results.json
 
 
 after_script:
