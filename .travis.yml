@@ -18,7 +18,7 @@ addons:
       secure: b1da882ae7c1605ef1d8d81221a2363fc06b48c1
  
 script: 
-        behave --junit features/steps/testui.feature
+        behave --junit features/steps/
 
 
 
