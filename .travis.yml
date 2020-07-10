@@ -17,7 +17,7 @@ addons:
     token:
       secure: b1da882ae7c1605ef1d8d81221a2363fc06b48c1
  
-script:   behave --format json -o results/results.json
+script:   - behave --format json -o results/results.json
 
 after_success: 
  - coveralls
