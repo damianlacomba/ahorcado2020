@@ -8,7 +8,6 @@ before_install:
   - rvm install 2.3
   - rvm use 2.3
   - gem install hiptest-publisher
-  - "hiptest-publisher -c behave.conf  --only=features,step_definitions --test-run-id=208503"
 
 install: pip install -r requirements.txt
          pip install coveralls
@@ -18,13 +17,10 @@ addons:
     token:
       secure: b1da882ae7c1605ef1d8d81221a2363fc06b48c1
  
-script: 
-        behave --format json -o results/results.json
+script: coverage run -m unittest Test_ahorcado
+        behave --junit features/
 
 
-after_script:
- - hiptest-publisher -c behave.conf  --push=results/results.json --test-run-id=208503
-        
 
 after_success: 
  - coveralls
