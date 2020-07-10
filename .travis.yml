@@ -10,8 +10,10 @@ before_install:
   - gem install hiptest-publisher
 
 install: pip install -r requirements.txt
+         pip install behave-webdriver
          pip install selenium
          pip install coveralls
+        
 addons:
   sonarcloud:
     organization: "damianlacomba_ahorcado2020" 
