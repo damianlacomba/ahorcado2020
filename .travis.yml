@@ -18,7 +18,7 @@ before_script:
         - unzip chromedriver_win32.zip -d /home/travis/virtualenv/python3.8/bin/
         - export CHROME_BIN=chromium-browser
  
-script: - SELENIUM_HEADLESS=True  behave --format json -o results/results.json 
+script:  SELENIUM_HEADLESS=True  behave --format json -o results/results.json 
 
 after_success: 
  - coveralls
