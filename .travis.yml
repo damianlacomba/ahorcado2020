@@ -16,6 +16,7 @@ addons:
       secure: b1da882ae7c1605ef1d8d81221a2363fc06b48c1
 
 before_script:
+        echo $ PATH
         - wget https://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_win32.zip
         - unzip chromedriver_win32.zip -d /home/travis/virtualenv/python3.8/bin/
         - export CHROME_BIN=chromium-browser
