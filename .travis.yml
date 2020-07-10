@@ -4,9 +4,11 @@ python:
 cache: pip
 
 before_install:
-          gem install cucumber
-  
-  
+  - pip install behave
+  - rvm install 2.3
+  - rvm use 2.3
+  - gem install hiptest-publisher
+  - "hiptest-publisher -c behave.conf  --only=features,step_definitions --test-run-id=208499"
 
 install: pip install -r requirements.txt
          pip install coveralls
@@ -18,6 +20,13 @@ addons:
  
 script: coverage run -m unittest Test_ahorcado
         cucumber --version
+
+  script:   - hiptest-publisher -c behave.conf  --push=results/results.json --test-run-id=208499
+
+
+after_script:
+ - hiptest-publisher -c behave.conf  --push=results/results.json --test-run-id=208499
+        
 
 after_success: 
  - coveralls
