@@ -64,13 +64,24 @@ def step_impl(context):
     
     assert palabra == "G A T O"
 
-@when('un ganador')
-def winner(context):
-    welcome(context)
-    correct_words(context)
-    win(context)
-
-@then("ingresa 6 letras incorrectas")
+@given('un ganador')
 def step_impl(context):
-    incorrect_words(context)
+    driver.get('http://localhost:5000')
+    time.sleep(3)
+    element = driver.find_element_by_class_name("user")
+    element.send_keys("juani")
+    driver.find_element_by_class_name("play").click()
+    time.sleep(5)
+    jugador = driver.find_element_by_tag_name("h1").text
+
+    for i in ["G","A","T","O"]:
+        element = driver.find_element_by_id(i)
+        element.click()
+        time.sleep(2)
+    element = driver.find_element_by_id("word")
+    palabra = element.text
     
+    assert palabra == "G A T O"
+
+
+

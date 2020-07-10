@@ -1,6 +1,5 @@
 Feature: Resultador de un jugador de la palabra GATO
-   
-  
+    
   Scenario: un jugador gana una partida cuando ingresa correctamente las letras
      Given un jugador
       When ingresa correctamente todas las letras
@@ -18,8 +17,7 @@ Feature: Resultador de un jugador de la palabra GATO
 
    Scenario: Cuando un jugador gana y sigue aprentando letras el juego no se modifica
       Given un ganador
-       When ingresa 6 letras incorrectas
+       When ingresa 6 veces letras incorrectas
        Then el resultado es ganador
-
  
 

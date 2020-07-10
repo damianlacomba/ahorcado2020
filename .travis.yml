@@ -2,6 +2,13 @@ language: python
 python:
   - "3.8"
 cache: pip
+
+before_install:
+  - pip install behave
+  - rvm install 2.3
+  - rvm use 2.3
+  - "hiptest-publisher -c behave.conf --token=$25378311041902327743343516012072736302807327164383933559 --only=features,step_definitions --test-run-id=208339"
+
 install: pip install -r requirements.txt
          pip install coveralls
 addons:
@@ -11,6 +18,11 @@ addons:
       secure: b1da882ae7c1605ef1d8d81221a2363fc06b48c1
  
 script: coverage run -m unittest Test_ahorcado
+        - behave --format json -o results/results.json
+
+after_script:
+ - hiptest-publisher -c behave.conf --token=$25378311041902327743343516012072736302807327164383933559N --push=results/results.json --test-run-id=208339
+        
 
 after_success: 
  - coveralls
