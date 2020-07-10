@@ -7,6 +7,7 @@ before_install:
   - pip install behave
   - rvm install 2.3
   - rvm use 2.3
+  - gem install hiptest-publisher
   - "hiptest-publisher -c behave.conf --token=$25378311041902327743343516012072736302807327164383933559 --only=features,step_definitions --test-run-id=208339"
 
 install: pip install -r requirements.txt
