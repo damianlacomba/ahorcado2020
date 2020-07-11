@@ -6,7 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 #DRIVER LOCAL
-#driver = r"C:\chromedriver_win32\chromedriver.exe"
+#driver = r"C:\Users\Damian\Downloads\chromedriver_win32\chromedriver.exe"
 
 #DRIVER EN EL SERVIDOR
 driver = r"/home/travis/virtualenv/python3.8.0/bin/chromedriver"
