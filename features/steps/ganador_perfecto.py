@@ -11,7 +11,6 @@ def welcome(context):
     time.sleep(5)
     jugador = context.browser.find_element_by_tag_name("h1").text
 
-
 @when('ingresa correctamente todas las letras')
 def correct_words(context):
     for i in ["G","A","T","O"]:
@@ -49,6 +48,7 @@ def step_impl(context):
     element = context.browser.find_element_by_class_name("loser")
 
     assert element != None
+
 
 @when('ingresa letras correctas e incorrectas')
 def step_impl(context):
