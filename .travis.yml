@@ -6,6 +6,7 @@ cache: pip
 
 install: pip install -r requirements.txt
          pip install coveralls
+         pip install behave
         
 addons:
   chrome: stable
@@ -18,8 +19,8 @@ before_script:
   - wget https://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.8.0/bin/
        
-script:   behave 
-          - coverage run -m unitest Test_ahorcado 
+script:   coverage run -m unitest Test_ahorcado 
+          - behave 
 
 after_success: 
  - coveralls
