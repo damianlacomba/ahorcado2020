@@ -15,7 +15,7 @@ def welcome(context):
 def correct_words(context):
     for i in ["G","A","T","O"]:
         element = context.browser.find_element_by_id(i)
-        element.enviroment.click()
+        element.click()
         time.sleep(2)
     element = context.browser.find_element_by_id("word")
     palabra = element.text
