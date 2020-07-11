@@ -3,7 +3,7 @@ import time
 
 @given('un jugador')
 def welcome(context):
-    context.browser.get('https://agiles20-ahorcado.herokuapp.com/jugar/')
+    context.browser.get('https://agiles20-ahorcado.herokuapp.com/')
     time.sleep(3)
     element = context.browser.find_element_by_class_name("user")
     element.send_keys("juani")
@@ -63,7 +63,7 @@ def step_impl(context):
 
 @given('un ganador')
 def step_impl(context):
-    context.browser.get('https://agiles20-ahorcado.herokuapp.com/jugar/')
+    context.browser.get('https://agiles20-ahorcado.herokuapp.com/')
     time.sleep(3)
     element = context.browser.find_element_by_class_name("user")
     element.send_keys("juani")
