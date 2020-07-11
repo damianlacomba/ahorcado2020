@@ -2,7 +2,9 @@ from behave import given, when, then
 from selenium import webdriver
 import time
 
-driver = webdriver.Chrome(executable_path=r"C:\Users\Damian\Downloads\chromedriver_win32\chromedriver.exe")
+#driver = webdriver.Chrome(executable_path=r"C:\Users\Damian\Downloads\chromedriver_win32\chromedriver.exe")
+
+driver = webdriver.Chrome(executable_path=r"/home/travis/virtualenv/python3.8.2/bin/chromedriver")
 
 @given('un jugador')
 def welcome(context):
