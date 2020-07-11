@@ -11,7 +11,7 @@ from selenium.webdriver.chrome.options import Options
 #DRIVER EN EL SERVIDOR
 driver = r"/home/travis/virtualenv/python3.8.0/bin/chromedriver"
 
-app = "https://agiles20-ahorcado.herokuapp.com/jugar"
+app = "https://agiles20-ahorcado.herokuapp.com/jugar/"
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
