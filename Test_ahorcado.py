@@ -13,9 +13,6 @@ class AhorcadoTest(unittest.TestCase):
         resultado = self.juego.validar_letra(letra)
         self.assertEqual(True,resultado)
     
-    def test_nombreBienvenida_nombre_minus(self):
-        bienvenida = self.juego.bienvenida("juan")
-        self.assertEqual("Hola Juan",bienvenida)
 
     def test_ingreso_gato_juego_ganador_perfecto(self):
         letras_seleccionadas=["a","g","t","o"]

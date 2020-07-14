@@ -9,7 +9,7 @@ def welcome(context):
     element.send_keys("juani")
     context.browser.find_element_by_class_name("play").click()
     time.sleep(5)
-    jugador = context.browser.find_element_by_tag_name("h1").text
+    
 
 @when('ingresa correctamente todas las letras')
 def correct_words(context):

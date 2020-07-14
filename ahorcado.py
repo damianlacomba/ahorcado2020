@@ -14,7 +14,7 @@ class Juego(object):
         try:
             palabra = self.palabras[pos]
             self.set_palabra(palabra)
-        except:
+        except IndexError:
             while pos > len(self.palabras)-1:
                 pos = pos-len(self.palabras)
                 
@@ -48,10 +48,6 @@ class Juego(object):
         else:
             return False
         
-    def bienvenida(self,nombre):
-        nombre = nombre.capitalize()
-        self.jugador = nombre
-        return ("Hola {}".format(nombre))
 
     
     def gano(self):
