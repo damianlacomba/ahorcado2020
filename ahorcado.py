@@ -30,7 +30,7 @@ class Juego(object):
     
         
     def set_palabra_usuario(self,palabra):
-        self.palabra_usuario = [ "_" for i in range(len(palabra))]
+        self.palabra_usuario = [ "_" for _ in range(len(palabra))]
         
     
 

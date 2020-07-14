@@ -23,12 +23,7 @@ def index():
         session["user"] = user
         session["words"] = []
         session["juegos"] = 0
-        """print(user)
-        global juego
-        juego = Juego()
-        juego.set_jugador(user)
-        print(juego.jugador)
-        juego.set_palabra("HAMACA")"""
+       
         return redirect(url_for("play"))
     return render_template('index.html')
 

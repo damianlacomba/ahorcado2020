@@ -69,7 +69,7 @@ def step_impl(context):
     element.send_keys("juani")
     context.browser.find_element_by_class_name("play").click()
     time.sleep(5)
-    jugador = context.browser.find_element_by_tag_name("h1").text
+    
 
     for i in ["G","A","T","O"]:
         element = context.browser.find_element_by_id(i)
