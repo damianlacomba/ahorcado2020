@@ -22,7 +22,7 @@ before_script:
        
 script:   
   - behave
-  - coverage run -m unittest Test_ahorcado 
+  - coverage run -m unittest test_ahorcado 
 
 after_success: 
  - coveralls
