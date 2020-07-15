@@ -80,4 +80,17 @@ def step_impl(context):
     
     assert palabra == "G A T O"
 
-    
+@given("un usuario en la pagina principal sin registrarse")
+def step_impl(context):
+    context.browser.get('https://agiles20-ahorcado.herokuapp.com/')
+    jugador = context.browser.find_element_by_class_name("user").text
+    assert jugador == ""
+
+@when("ingresa a jugar")
+def step_impl(context):
+    context.browser.get('https://agiles20-ahorcado.herokuapp.com/jugar')
+
+@then("permance en el index hasta ingresar su nombre")
+def step_impl(context):
+    url = context.browser.getCurrentUrl()
+    assert url == "https://agiles20-ahorcado.herokuapp.com/"
