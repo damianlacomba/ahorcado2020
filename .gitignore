@@ -2,6 +2,7 @@ __pycache__/*
 *.py[cod]
 *$py.class
 *.so
+chromedriver_linux64.zip
 
 # Distribution / packaging
 .Python
