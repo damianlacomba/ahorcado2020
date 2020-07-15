@@ -92,5 +92,5 @@ def step_impl(context):
 
 @then("permance en el index hasta ingresar su nombre")
 def step_impl(context):
-    url = context.browser.getCurrentUrl()
+    url = context.browser.current_url
     assert url == "https://agiles20-ahorcado.herokuapp.com/"
