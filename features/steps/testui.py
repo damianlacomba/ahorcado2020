@@ -1,9 +1,11 @@
 from behave import given, when, then
 import time
 
+url = 'https://agiles20-ahorcado.herokuapp.com/'
+
 @given('un jugador')
 def welcome(context):
-    context.browser.get('https://agiles20-ahorcado.herokuapp.com/')
+    context.browser.get(url)
     time.sleep(3)
     element = context.browser.find_element_by_class_name("user")
     element.send_keys("juani")
@@ -63,7 +65,7 @@ def step_impl(context):
 
 @given('un ganador')
 def step_impl(context):
-    context.browser.get('https://agiles20-ahorcado.herokuapp.com/')
+    context.browser.get(url)
     time.sleep(3)
     element = context.browser.find_element_by_class_name("user")
     element.send_keys("juani")
@@ -82,15 +84,15 @@ def step_impl(context):
 
 @given("un usuario en la pagina principal sin registrarse")
 def step_impl(context):
-    context.browser.get('https://agiles20-ahorcado.herokuapp.com/')
+    context.browser.get(url)
     jugador = context.browser.find_element_by_class_name("user").text
     assert jugador == ""
 
 @when("ingresa a jugar")
 def step_impl(context):
-    context.browser.get('https://agiles20-ahorcado.herokuapp.com/jugar')
+    context.browser.get(url)
 
 @then("permance en el index hasta ingresar su nombre")
 def step_impl(context):
-    url = context.browser.current_url
-    assert url == "https://agiles20-ahorcado.herokuapp.com/"
+    url_value = context.browser.current_url
+    assert url_value == url
