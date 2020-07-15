@@ -1,6 +1,9 @@
 Feature: Resultador de un jugador de la palabra GATO
 
-
+   Scenario: Si un usuario no se registro no puede ingresar a jugar
+      Given un usuario en la pagina principal sin registrarse
+       When ingresa a jugar
+       Then permance en el index hasta ingresar su nombre
     
   Scenario: un jugador gana una partida cuando ingresa correctamente las letras
      Given un jugador
