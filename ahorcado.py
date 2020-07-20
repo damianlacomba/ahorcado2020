@@ -65,7 +65,7 @@ class Juego(object):
             if self.gano():
                 self.resultado = "ganador"
         else:
-            self.intentos -=1
+            self.intentos +=1
         
         if self.intentos == 0:
             self.resultado = "perdedor"

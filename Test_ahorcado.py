@@ -80,14 +80,9 @@ class AhorcadoTest(unittest.TestCase):
         self.probar_letras(letras_seleccionadas)
         letras = self.juego.letras
         self.assertEqual (letras_seleccionadas,letras)
-    
-    def tests_elegir_palabra_6(self):
-        self.juego.elegir_palabra(6)
+ 
+    def tests_elegir_palabra_9(self):
+        self.juego.elegir_palabra(9)
         palabra = self.juego.palabra
-        self.assertEqual("PERRO",palabra)
-    
-   # def tests_elegir_palabra_9(self):
-       # self.juego.elegir_palabra(9)
-        #palabra = self.juego.palabra
-        #self.assertEqual("AVESTRUZ",palabra)
+        self.assertEqual("AVESTRUZ",palabra)
    
