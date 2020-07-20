@@ -5,7 +5,7 @@
     {%if juego.resultado=="":%}
         <h1>Hola, {{juego.jugador | capitalize}} !</h1>
     {%elif juego.resultado=="ganador":%}
-        <h1 class="winner">¡¡Felicitaciones {{juego.jugador | capitalize}}!!<br> ¡¡Ganaste!!</h2>
+        <h1 class="winner">¡¡Feliz dia del amigo {{juego.jugador | capitalize}}!!<br> ¡¡Ganaste!!</h2>
     {%else:%}
         <h1 class="loser">Oh, lo siento {{juego.jugador | capitalize}}<br> Perdiste</h2> 
     {%endif%}
